@@ -26,7 +26,7 @@ html {
   right: 60px;
   width: 50px;
   height: 50px;
-  background: rgba(1, 43, 85, 0.1);
+  background: rgba(148, 174, 199, 0.48);
   border-radius: 5px;
   z-index: 1;
   cursor: pointer;
@@ -132,6 +132,8 @@ html {
 .siteContainer .right_ .topHead p {
   font-size: 2.8rem;
   margin-bottom: 30px;
+  color: rgb(1, 43, 85);
+  font-weight: bold;
 }
 .siteContainer .right_ .topHead span {
   color: #597188;
@@ -235,6 +237,9 @@ html {
 }
 
 @media (max-width: 768px) {
+  .container .goTop {
+    display: none;
+  }
   .siteContainer {
     display: flex;
     align-items: center;
@@ -257,21 +262,76 @@ html {
   .siteContainer .navbar_ .navMenu {
     position: fixed;
     left: -100%;
-    top: 70px;
+    top: 0;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     background-color: #fff;
     width: 100%;
+    height: 100%;
     transition: 0.3s;
     z-index: 2;
   }
-  .siteContainer .navbar_ .navMenu ul li {
+  .siteContainer .navbar_ .navMenu .close_ {
+    position: absolute;
+    top: 5%;
+    right: 10%;
+  }
+  .siteContainer .navbar_ .navMenu .close_ i {
+    color: #012B55;
+    font-size: 3rem;
+  }
+  .siteContainer .navbar_ .navMenu .menu_ .list_ ul li {
     padding: 0 0 30px;
     color: #41576D;
     font-size: 2.2rem;
     list-style: none;
+  }
+  .siteContainer .navbar_ .navMenu .menu_ .list_ ul li:first-child {
+    font-weight: bold;
+    color: #012B55;
+  }
+  .siteContainer .navbar_ .navMenu .menu_ .contact_ {
+    padding: 0 0 30px;
+  }
+  .siteContainer .navbar_ .navMenu .menu_ .contact_ span {
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: #012B55;
+  }
+  .siteContainer .navbar_ .navMenu .menu_ .social_ {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+    padding: 5%;
+    width: 100%;
+    bottom: 0;
+    left: -100%;
+    background: #fff;
+    transition: 0.3s;
+  }
+  .siteContainer .navbar_ .navMenu .menu_ .social_ span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 27.5px;
+    margin-right: 20px;
+    height: 55px;
+    width: 55px;
+    background-color: #E5E9EE;
+  }
+  .siteContainer .navbar_ .navMenu .menu_ .social_ span i {
+    font-size: 1.8rem;
+    color: #012B55;
+  }
+  .siteContainer .navbar_ .navMenu .menu_ .social_ span:last-child {
+    margin: 0;
+  }
+  .siteContainer .navbar_ .navMenu .menu_ .social_.active {
+    left: 0;
   }
   .siteContainer .navbar_ .navMenu.active {
     left: 0;
@@ -279,22 +339,9 @@ html {
   .siteContainer .navbar_ .burger_ {
     cursor: pointer;
   }
-  .siteContainer .navbar_ .burger_ .bar_ {
-    display: block;
-    width: 25px;
-    height: 3px;
-    margin: 5px auto;
-    transition: all 0.3s ease-in-out;
-    background-color: #000;
-  }
-  .siteContainer .navbar_ .burger_.active .bar_:nth-child(2) {
-    opacity: 0;
-  }
-  .siteContainer .navbar_ .burger_.active .bar_:nth-child(1) {
-    transform: translateY(8px) rotate(45deg);
-  }
-  .siteContainer .navbar_ .burger_.active .bar_:nth-child(3) {
-    transform: translateY(-8px) rotate(-45deg);
+  .siteContainer .navbar_ .burger_ i {
+    font-size: 3rem;
+    color: #012B55;
   }
   .siteContainer .left_ {
     display: none;
@@ -308,7 +355,7 @@ html {
     padding-top: 44px;
   }
   .siteContainer .right_ .topHead p {
-    font-size: 1.6rem;
+    font-size: 1.7rem;
     margin-bottom: 8px;
     margin-top: 0;
   }
@@ -321,6 +368,27 @@ html {
   .siteContainer .right_ .pic_ .picEach {
     width: 100%;
     margin-right: 0;
+  }
+  .siteContainer .right_ .footer_ {
+    padding: 10px 5% 10px 5%;
+  }
+}
+@media (max-width: 480px) {
+  .siteContainer .navbar_ .title_ span {
+    font-size: 2.2rem;
+  }
+  .siteContainer .right_ .topHead {
+    padding: 50px 40px 70px 40px;
+  }
+  .siteContainer .right_ .topHead p {
+    font-size: 1.7rem;
+    margin-bottom: 7px;
+    margin-top: 0;
+  }
+  .siteContainer .right_ .topHead span {
+    font-size: 1.4rem;
+    margin-bottom: 0;
+    margin-top: 13px;
   }
 }
 
